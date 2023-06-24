@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Protected Site Enter Activation key"
+AuthUserFile /usr/home/yourusername/.htpasswd
+require valid-user
