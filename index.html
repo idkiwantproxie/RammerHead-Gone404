@@ -75,6 +75,70 @@
 </body> 
 
 
+<script>
+  function setCookie(cname,cvalue,exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
+  function checkCookie() {
+    let user = getCookie("username");
+    if (user != "") {
+      alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your email address to acces the site using a fake email will result in being banned.:","");
+       if (user != "" && user != null) {
+         setCookie("username", user, 30);
+       }
+    }
+  }
+  </script>
+
+
+
+<script>
+          var password="Winton-Student";
+          (function passcodeprotect() {
+             var passcode = prompt("Enter-Username:");
+             while (passcode !== password) {
+                alert("Incorrect Username");
+                return passcodeprotect();
+             }
+          }());
+          alert('Next step-Please enter your Activation Key:');
+       </script>
+
+
+    <script>
+        var password = "PlingifyPlug-Winton-98347";
+        (function passcodeprotect() {
+           var passcode = prompt("To Access Site Enter Activation key:");
+           while (passcode !== password) {
+              alert("Incorrect Key");
+              return passcodeprotect();
+           }
+        }());
+        alert('Welcome to Plingifyplug-RammerHead Edition Gone-404, Your name might be asked as this site uses cookies. You will be unable to enter this site without entering your name.');
+     </script>
+
 
 
 <style>
